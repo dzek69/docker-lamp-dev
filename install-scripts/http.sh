@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Apache install with PHP Support
-apt-get install apache2 libapache2-mod-php7.0 -y
+apt-get install apache2 libapache2-mod-php7.2 -y
 
 # Enable mod rewrite and .htaccess support, set proper ownerships
 a2enmod rewrite

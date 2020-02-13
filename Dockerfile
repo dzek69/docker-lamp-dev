@@ -1,7 +1,11 @@
-FROM ubuntu:16.04
+FROM ubuntu:18.04
 
 COPY install-scripts install-scripts
 RUN chmod +x -R install-scripts
+
+ENV DEBIAN_FRONTEND=noninteractive
+ENV TZ=Europe/Warsaw
+RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone
 
 RUN ./install-scripts/basic.sh
 RUN ./install-scripts/node.sh

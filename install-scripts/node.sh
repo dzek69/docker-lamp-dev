@@ -1,10 +1,8 @@
 #!/bin/bash
 
 # Node install
-curl -sL https://deb.nodesource.com/setup_8.x | bash -
+curl -sL https://deb.nodesource.com/setup_12.x | bash -
 apt-get install nodejs -y
-npm i -g n
-n 9.8.0
 
 # Yarn install
 curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | apt-key add -

@@ -2,7 +2,8 @@
 
 # Basic stuff upgrade
 apt-get update
-apt-get upgrade -y
 
 # Basic stuff install
-apt-get install curl -y
+apt-get install tzdata curl apt-utils software-properties-common -y
+apt-get update
+apt-get upgrade -y

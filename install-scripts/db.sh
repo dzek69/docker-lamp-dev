@@ -1,7 +1,11 @@
 #!/bin/bash
 
+apt-key adv --recv-keys --keyserver hkp://keyserver.ubuntu.com:80 0xF1656F24C74CD1D8
+add-apt-repository 'deb [arch=amd64,arm64,ppc64el] http://sfo1.mirrors.digitalocean.com/mariadb/repo/10.2/ubuntu bionic main'
+apt-get update
+
 # MariaDB install
-apt-get install mariadb-common mariadb-server mariadb-client -y
+apt-get install mariadb-server galera mariadb-client libmariadb3 mariadb-common -y
 
 # Start mysql and add `user` user with all privileges
 service mysql start
